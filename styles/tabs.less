@@ -1,0 +1,72 @@
+// Tabs
+// -------------------
+// Displays selectable tabs above the editor.
+// Overrides: atom/tabs
+
+.tab-bar {
+  background-color: @tab-bar-background-color;
+
+  .tab {
+    background-color: @tab-background-color;
+    color: @text-color;
+    cursor: pointer;
+    font-size: @font-size;
+    height: @tab-height;
+    line-height: @tab-height;
+    overflow: hidden;
+    padding: 0 10px;
+
+    &.active {
+      color: @text-color-selected;
+    }
+    // Modified Icon (the circle) -------------------
+    &.modified:not(:hover) .close-icon {
+      border-color: @text-color-info;
+      margin-top: -3px;
+      right: @component-padding + 4px; // 4px -> half of icon size
+      top: 50%;
+    }
+
+    &.modified:hover .close-icon {
+      color: currentColor;
+    }
+    // Close Icon (the X) -------------------
+    .close-icon {
+      cursor: pointer;
+      display: none;
+
+      &:hover {
+        color: @text-color-selected;
+      }
+    }
+
+    &.active {
+      .icon:before {
+        opacity: 1;
+      }
+
+      .close-icon:hover {
+        color: @text-color;
+      }
+    }
+    // Dragging -------------------
+    // Styles get applied while dragging a tab
+    &.is-dragging {
+      background: darken(@tab-background-color, 10%);
+      border-color: transparent;
+      opacity: 0.5;
+
+      & .close-icon {
+        visibility: hidden;
+      }
+    }
+
+    > .icon:before {
+      font-size: 24px;
+      opacity: 0.2;
+      position: absolute;
+      right: 0;
+      top: 5px;
+    }
+  }
+}

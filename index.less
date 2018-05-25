@@ -1,0 +1,98 @@
+@import "styles/ui-variables";
+@import "styles/base";
+@import "styles/buttons";
+@import "styles/editor";
+@import "styles/terminal";
+@import "styles/find-and-replace";
+@import "styles/git";
+@import "styles/key-binding";
+@import "styles/lists";
+@import "styles/panels";
+@import "styles/progress";
+@import "styles/sites";
+@import "styles/status-bar";
+@import "styles/tabs";
+@import "styles/text";
+@import "styles/tooltips";
+@import "styles/tree-view";
+
+// Scrollbars
+.scrollbars-visible-always /deep/ ::-webkit-scrollbar {
+  width: 0;
+  padding: 0;
+  &-track {
+    background-color: @base-darker-color;
+  }
+
+  &-thumb {
+    background-color: @base-dark-color;
+    border-radius: 0;
+    border: 0;
+  }
+}
+
+// Cursor
+.cursors > .cursor {
+    transition: opacity 0.5s ease;
+}
+
+// Smooth scroll
+atom-text-editor.editor > div > .scroll-view > *,
+atom-text-editor.editor > div > .gutter-container > div {
+    transition: transform .2s ease;
+}
+
+
+// Toolbar
+atom-workspace .command-toolbar.toolbar-horiz {
+  background: transparent;
+  box-shadow: none;
+  .btn {
+    background: inherit;
+  }
+}
+
+atom-dock .tab-bar .tab {
+  &, &.active {
+    max-width: 100%;
+    background: transparent;
+  }
+}
+
+.preview-pane .preview-header {
+  background: transparent;
+}
+
+atom-pane-container atom-pane .item-views .pane-item {
+  background: @base-darker-color;
+}
+
+.settings-view {
+  .package-card, .package-card:hover {
+    background-color: transparent;
+    .avatar {
+      filter: grayscale(100%);
+    }
+  }
+  .config-menu {
+    background-color: transparent;
+    .nav > li.active > a,
+    .nav > li:hover > a {
+      background: inherit;
+    }
+  }
+}
+
+.github-Panel {
+  background: @base-darker-color;
+}
+
+.indent-guide-improved {
+  background-color: @base-dark-color;
+  &.indent-guide-stack {
+    background-color: @base-dark-color;
+    &.indent-guide-active {
+      background-color: @base-light-color;
+    }
+  }
+}
