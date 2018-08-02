@@ -19,6 +19,20 @@
     &.active {
       color: @text-color-selected;
     }
+
+    &.modified {
+      .title:after {
+          display: block;
+          content: attr(data-name);
+          position: absolute;
+          top: 0;
+          left: 10px;
+          opacity: .8;
+          z-index: 1;
+          animation: glitch .3s cubic-bezier(.25, .46, .45, .94) reverse both infinite
+      }
+    }
+
     // Modified Icon (the circle) -------------------
     &.modified:not(:hover) .close-icon {
       border-color: @text-color-info;
