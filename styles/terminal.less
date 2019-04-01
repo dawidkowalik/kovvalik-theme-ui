@@ -1,6 +1,15 @@
-.terminal-view {
-  .standard {
-    background: @base-darker-color;
-    color: @base-light-color;
+.tool-panel {
+  .platformio-ide-terminal.terminal-view {
+    .standard {
+      background: @base-darker-color;
+    }
+    .terminal {
+      color: @base-light-color !important;
+      font-family: @font-family-monospace !important;
+      font-size: @font-size-small !important;
+    }
+    .input-block .btn-toolbar {
+      padding: 0;
+    }
   }
 }

@@ -1,9 +1,35 @@
 xatom-debug-area xatom-debug-group-content {
   background: @base-dark-color;
 }
-xatom-debug-console xatom-debug-console-line {
-  background: @base-darker-color;
+xatom-debug-toolbar {
+  bugs-scheme-status {
+    background: transparent;
+    color: @text-color;
+  }
+  .bugs-icon-logo {
+    display: none;
+  }
+  .btn {
+    background-color: @base-dark-color !important;
+  }
+  .bugs-scheme .bugs-scheme-arrow:before {
+    display: none;
+  }
 }
-xatom-debug-controls {
+xatom-debug-console {
+  background: @base-darker-color;
+  border-top: 1px @base-dark-color solid;
+  font-family: @font-family-monospace;
   margin: 0;
+  xatom-debug-console-line {
+    background: @base-darker-color;
+  }
+  xatom-debug-controls {
+    display: none;
+  }
+}
+xatom-debug-area {
+  xatom-debug-controls .btn {
+    background: @base-dark-color;
+  }
 }

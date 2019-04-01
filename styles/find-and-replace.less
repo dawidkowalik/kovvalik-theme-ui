@@ -7,4 +7,29 @@
 
 .find-and-replace {
   border-top: 1px solid @base-border-color;
+  padding: 0;
+  .header-item.description {
+    display: none;
+  }
+  .btn-group-find, .btn-group-replace {
+    flex: 2;
+  }
+  .btn-group-options .btn {
+    line-height: 1;
+  }
+  .input-block-item {
+    padding: 0;
+    font-size: @font-size-small;
+    atom-text-editor, atom-text-editor[mini] {
+      font-size: @font-size-small;
+    }
+    .btn {
+      &.disabled {
+        opacity: 1;
+      }
+    }
+  }
+  .btn-group + .btn-group, .preview-pane .btn-group + .btn-group, .project-find .btn-group + .btn-group {
+    margin: 0;
+  }
 }

@@ -1,7 +1,7 @@
 @import "styles/ui-variables";
-@import "styles/animations";
 @import "styles/base";
 @import "styles/buttons";
+@import "styles/command-toolbar";
 @import "styles/editor";
 @import "styles/terminal";
 @import "styles/find-and-replace";
@@ -10,9 +10,11 @@
 @import "styles/lists";
 @import "styles/panels";
 @import "styles/progress";
+@import "styles/settings-view";
 @import "styles/sites";
 @import "styles/status-bar";
 @import "styles/tabs";
+@import "styles/tester";
 @import "styles/text";
 @import "styles/tooltips";
 @import "styles/tree-view";
@@ -37,12 +39,12 @@
 .cursors > .cursor {
     transition: opacity 0.5s ease;
 }
-
-// Smooth scroll
-atom-text-editor.editor > div > .scroll-view > *,
-atom-text-editor.editor > div > .gutter-container > div {
-    transition: transform .2s ease;
-}
+//
+// // Smooth scroll
+// atom-text-editor.editor > div > .scroll-view > *,
+// atom-text-editor.editor > div > .gutter-container > div {
+//     transition: transform .2s ease;
+// }
 
 
 // Toolbar
