@@ -21,7 +21,14 @@
 // Used on top of the editor, like the Command Palette.
 
 atom-panel.modal {
-  border: 1px solid @overlay-border-color;
-  border-top: none;
+  left: 0px;
+  margin: 0px;
+  width: 100%;
+  height: 100%;
   box-shadow: 0;
+  .fuzzy-finder {
+    .list-group {
+      max-height: 100%;
+    }
+  }
 }
