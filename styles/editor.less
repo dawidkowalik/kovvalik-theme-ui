@@ -24,4 +24,20 @@ atom-text-editor {
       background-color: @background-color-selected;
     }
   }
+  .gutter.line-numbers {
+    .line-number {
+      opacity: 1;
+      color: @text-color-subtle;
+      &.git-line-added {
+        border-left: 1px solid @ui-site-color-2;
+        color: @ui-site-color-2;
+        padding-left: calc(0.5em - 1px);
+      }
+      &.git-line-modified {
+        border-left: 1px solid @ui-site-color-3;
+        color: @ui-site-color-3;
+        padding-left: calc(0.5em - 1px);
+      }
+    }
+  }
 }
